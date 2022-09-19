@@ -12,10 +12,11 @@ internal class Program
         int moneytopay;
         moneytopay = 100;
         int money300to1000;
-        kcar = 0;
-        money300to1000 = moneytopay + kcar +10;
-
         kcar = int.Parse(kcartotxt);
+        money300to1000 = moneytopay + (10 * kcar);
+
+
+        
 
         if (kcar<300)
         {
@@ -23,7 +24,7 @@ internal class Program
 
 
         }
-        if (kcar > 300  <=1000) {
+        if (kcar > 300) {
 
             Console.WriteLine(" Me tienes que pagar " + money300to1000 + " euros ");
 
