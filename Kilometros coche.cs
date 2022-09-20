@@ -1,8 +1,8 @@
 using System;
-internal class Program
 
+public class HelloWorld
 {
-    private static void Main(string[] args)
+    public static void Main(string[] args)
     {
         int kcar;
         
@@ -14,6 +14,7 @@ internal class Program
         int money300to1000;
         kcar = int.Parse(kcartotxt);
         money300to1000 = moneytopay + ((kcar - 300) * 10);
+        moneyover1000= moneytopay + ((kcar - 300) * 10)  
 
 
         
@@ -24,15 +25,16 @@ internal class Program
 
 
         }
-        if (kcar > 300) {
+        if (kcar > 300 &&  kcar <= 1000) {
 
             Console.WriteLine(" Me tienes que pagar " + money300to1000 + " euros ");
 
 
         }
-
-        if (kcar>1000)
-        {
-
-
-        }
+    if (kcar>1000) {
+        
+        Console.WriteLine(" Me tienes que pagar " + money300to1000 + " euros ");
+    }
+        
+    }
+}
