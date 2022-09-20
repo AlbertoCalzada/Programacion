@@ -16,7 +16,7 @@ public class HelloWorld
         money300to1000 = moneytopay + ((kcar - 300) * 10);
         int moneyover1000;
         moneyover1000= moneytopay + ((kcar - 300) * 10)+((kcar-1000)*5);  
-
+// Arriba he puesto moneyover1000= 7000 ((kcar-1000)*5);
 
         
 
