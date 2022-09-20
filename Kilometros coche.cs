@@ -4,7 +4,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        int kcar;
+        int kcar
         
         Console.WriteLine("Introduzca los kilometros del coche");
         string kcartotxt;
