@@ -4,7 +4,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        int kcar
+        int kcar;
         
         Console.WriteLine("Introduzca los kilometros del coche");
         string kcartotxt;
@@ -13,7 +13,7 @@ internal class Program
         moneytopay = 100;
         int money300to1000;
         kcar = int.Parse(kcartotxt);
-        money300to1000 = moneytopay + (10 * kcar);
+        money300to1000 = moneytopay + ((kcar - 300) * 10);
 
 
         
