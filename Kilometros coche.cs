@@ -6,7 +6,7 @@ public class HelloWorld
     {
         int kcar;
         
-        Console.WriteLine("Introduzca los kilometros del coche");
+        Console.WriteLine( " Introduzca los kilometros del coche ");
         string kcartotxt;
         kcartotxt = Console.ReadLine();
         int moneytopay;
@@ -14,7 +14,8 @@ public class HelloWorld
         int money300to1000;
         kcar = int.Parse(kcartotxt);
         money300to1000 = moneytopay + ((kcar - 300) * 10);
-        moneyover1000= moneytopay + ((kcar - 300) * 10)  
+        int moneyover1000;
+        moneyover1000= moneytopay + ((kcar - 300) * 10)+((kcar-1000)*5);  
 
 
         
