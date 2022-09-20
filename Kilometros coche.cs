@@ -34,8 +34,6 @@ public class HelloWorld
         }
     if (kcar>1000) {
         
-        Console.WriteLine(" Me tienes que pagar " + money300to1000 + " euros ");
+        Console.WriteLine(" Me tienes que pagar " + moneyover1000 + " euros ");
     }
         
-    }
-}
