@@ -43,8 +43,8 @@ namespace Pruebas
 
 
             }
+            Console.WriteLine("el coste es"  + cost );
             
         }
     }
 }
-
