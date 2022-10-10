@@ -1,0 +1,24 @@
+using System;
+
+namespace Progracion
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Dime un numero");
+            
+            int contador = 0;
+            while (contador <= 100)
+            {
+
+                Console.WriteLine(contador);
+                contador = contador + 5;
+
+
+            }
+           
+            Console.WriteLine("fin");
+        }
+    }
+}
