@@ -1,0 +1,95 @@
+using System;
+
+namespace Progracion
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Ejercicio4();
+            //int contador = 320;
+            //while (contador >= 160)
+            //{
+
+            //    Console.WriteLine(contador);
+            //    contador = contador - 20;
+
+
+            //}
+
+            //Console.WriteLine("fin");
+        }
+
+        
+        static void Ejercicio4 ()
+       
+        {
+
+            Console.WriteLine("Introduceme números positivos y negativos");
+            int nums = int.Parse(Console.ReadLine());
+            int suma = nums;
+
+            
+
+            while (nums >= 0)
+            {
+
+                        nums = int.Parse(Console.ReadLine());
+
+
+             
+                        
+                        
+
+
+                        
+                 if ( nums>0)        
+
+               
+              {
+
+                 suma = suma + nums;           
+
+                Console.WriteLine(suma + "total");            
+                        
+
+                }
+
+                
+
+                else 
+
+
+                {
+                    Console.WriteLine("Ejercicio terminado" + suma);
+
+
+                }
+                
+                
+                
+                /*
+                if (nums>=0)
+                {
+                    suma = nums + nums;
+
+
+                } 
+                 if(nums<0)
+                {
+
+
+                }*/
+
+            }
+
+           
+            
+
+            
+            
+        }
+    }
+}
+    
