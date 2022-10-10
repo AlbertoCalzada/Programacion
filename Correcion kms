@@ -1,0 +1,50 @@
+using System;
+
+namespace Pruebas
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int kcar;
+
+            Console.WriteLine(" Introduzca los kilometros del coche ");
+            
+            kcar =int.Parse( Console.ReadLine());
+            const int PARCIAL1 = 300;
+            const int parcial2 = 1000;
+            const int costeparcial1= 10;
+            const int costeparcial2 = 5;
+            const int costefijo = 100;
+            int cost = costefijo;
+           
+            // Arriba he puesto moneyover1000= 7000 ((kcar-1000)*5);
+
+
+
+            if (kcar > parcial2)
+            {
+                int rest = kcar - parcial2;
+                cost = costefijo + rest * costeparcial2;
+                kcar = kcar - rest;
+
+
+
+
+            }
+            
+            if (kcar >PARCIAL1)
+            {
+
+
+                int rest = kcar - PARCIAL1;
+                cost = costeparcial2 + rest * costeparcial1;
+
+
+            }
+            
+        }
+    }
+}
+
