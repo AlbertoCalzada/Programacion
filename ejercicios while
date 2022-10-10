@@ -7,7 +7,7 @@ namespace Progracion
         static void Main(string[] args)
         {
 
-            Ejercicio4();
+            Ejercicio6();
             //int contador = 320;
             //while (contador >= 160)
             //{
@@ -25,36 +25,125 @@ namespace Progracion
         static void Ejercicio4 ()
        
         {
-            
+
             Console.WriteLine("Introduceme números positivos y negativos");
             int nums = int.Parse(Console.ReadLine());
-            int suma = nums + nums;
+            int suma = nums;
+
+
 
             while (nums >= 0)
             {
 
                 nums = int.Parse(Console.ReadLine());
-                suma = nums + nums;
-                
-                if (nums>=0)
-                {
-                    suma = nums + nums;
 
 
-                } 
-                 if(nums<0)
+
+                if (nums >= 0)
+
+
                 {
+
+                    suma = suma + nums;
+
+                    Console.WriteLine(suma + "total");
+
+
+                }
+        
+                else
+
+                {
+                    Console.WriteLine("Ejercicio terminado" + suma);
 
 
                 }
 
+
+
+
             }
 
-           
-            Console.WriteLine("Terminado" + suma);
 
-            
-            
+
+
+
+
+
+               
+
+
+
+
+
+
         }
+
+
+        static void Ejercicio5 ()
+        {
+
+
+            Console.WriteLine("Escribeme varios numeros");
+            int nums = int.Parse(Console.ReadLine());
+            int suma = nums;
+
+            while (nums!=0)
+            {
+
+                nums = int.Parse(Console.ReadLine());
+
+                if (nums!=0)
+                {
+
+                    suma = suma * nums;
+
+                }
+                else
+                {
+
+                    Console.WriteLine("Ejercicio terminado " + suma);
+
+                }
+
+
+            }
+        }
+
+        static void Ejercicio6()
+        {
+
+            Console.WriteLine("Escribeme varios numeros");
+            int nums = int.Parse(Console.ReadLine());
+            int suma = nums;
+
+            while (nums >= 0)
+            {
+
+                nums = int.Parse(Console.ReadLine());
+
+                if (nums%2== 0)
+                {
+
+                    suma = suma + nums;
+
+                }
+                else
+                {
+
+                   
+
+                }
+
+                
+            }
+
+
+            Console.WriteLine(suma);
+
+
+        }
+
+
     }
 }
