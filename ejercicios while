@@ -149,22 +149,52 @@ namespace Progracion
 
 
             int combinacion = 1234;
+            
+           
             Console.WriteLine("Introduce combinacion de 4 digitos para abrir la caja fuerte");
-            int num1 = int.Parse(Console.ReadLine());
-
-
-            while (num1 != combinacion)
+            int intentos = 0;
+            int teclado = 1;
+            
+            while (teclado!=1234 && intentos<4)
             {
-                Console.WriteLine("Combinación incorrecta");          
-              num1= int.Parse(Console.ReadLine());
-                
-                
-                if (num1==combinacion)
+                teclado = int.Parse(Console.ReadLine());
+
+                intentos++;
+
+                if (teclado == combinacion)
                 {
 
-                    Console.WriteLine("Combinacion correcta");
+                    Console.WriteLine("Combinacion correcta, caja fuerte desbloqueada");
 
-                } 
+                } else if (intentos==4)
+                {
+                    Console.WriteLine("Caja fuerte bloqueada");
+
+
+                } else
+                {
+
+                    Console.WriteLine("Combinacion incorrecta");
+                    
+                }
+
+                
+
+
+
+
+
+            }
+
+            
+        }
+
+
+
+    }
+}
+    
+
                 
 
                     
