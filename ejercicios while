@@ -7,7 +7,7 @@ namespace Progracion
         static void Main(string[] args)
         {
 
-            Ejercicio6();
+            Ejercicio7();
             //int contador = 320;
             //while (contador >= 160)
             //{
@@ -144,6 +144,41 @@ namespace Progracion
 
         }
 
+        static void Ejercicio7()
+        {
+
+
+            int combinacion = 1234;
+            Console.WriteLine("Introduce combinacion de 4 digitos para abrir la caja fuerte");
+            int num1 = int.Parse(Console.ReadLine());
+
+
+            while (num1 != combinacion)
+            {
+                Console.WriteLine("Combinación incorrecta");          
+              num1= int.Parse(Console.ReadLine());
+                
+                
+                if (num1==combinacion)
+                {
+
+                    Console.WriteLine("Combinacion correcta");
+
+                } 
+                
+
+                    
+
+                
+
+                
+            }
+
+
+        }
+
+
 
     }
 }
+    
