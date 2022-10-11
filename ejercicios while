@@ -7,7 +7,7 @@ namespace Progracion
         static void Main(string[] args)
         {
 
-            Ejercicio7();
+            Ejercicio6();
             //int contador = 320;
             //while (contador >= 160)
             //{
@@ -17,7 +17,7 @@ namespace Progracion
 
 
             //}
-
+            
             //Console.WriteLine("fin");
         }
 
@@ -28,7 +28,7 @@ namespace Progracion
 
             Console.WriteLine("Introduceme números positivos y negativos");
             int nums = int.Parse(Console.ReadLine());
-            int suma = nums;
+            int total = nums;
 
 
 
@@ -44,9 +44,9 @@ namespace Progracion
 
                 {
 
-                    suma = suma + nums;
+                    total = total + nums;
 
-                    Console.WriteLine(suma + "total");
+                    
 
 
                 }
@@ -54,7 +54,7 @@ namespace Progracion
                 else
 
                 {
-                    Console.WriteLine("Ejercicio terminado" + suma);
+                    Console.WriteLine("Ejercicio terminado, la suma es " + total);
 
 
                 }
@@ -115,12 +115,12 @@ namespace Progracion
 
             Console.WriteLine("Escribeme varios numeros");
             int nums = int.Parse(Console.ReadLine());
-            int suma = nums;
+            int suma = 0;
 
             while (nums >= 0)
             {
 
-                nums = int.Parse(Console.ReadLine());
+                
 
                 if (nums%2== 0)
                 {
@@ -128,14 +128,10 @@ namespace Progracion
                     suma = suma + nums;
 
                 }
-                else
-                {
+                nums = int.Parse(Console.ReadLine());
 
-                   
 
-                }
 
-                
             }
 
 
@@ -189,24 +185,65 @@ namespace Progracion
             
         }
 
+        static void Ejercicio1()
+        {
 
 
-    }
-}
-    
 
-                
 
-                    
 
-                
+            Console.WriteLine("Dime un numero");
+            int num1 = int.Parse(Console.ReadLine());
+            int contador = 1;
+            while (contador <= num1)
+            {
 
-                
+                Console.WriteLine(contador);
+                contador = contador + 1;
+
+
             }
+
+            Console.WriteLine("fin");
+
+        }
+
+        static void Ejercicio2()
+        {
+
+            Console.WriteLine("Dime un numero");
+
+            int contador = 0;
+            while (contador <= 100)
+            {
+
+                Console.WriteLine(contador);
+                contador = contador + 5;
+
+
+            }
+
+            Console.WriteLine("fin");
 
 
         }
 
+        static void Ejercicio3()
+        {
+
+
+            int contador = 320;
+            while (contador >= 160)
+            {
+
+                Console.WriteLine(contador);
+                contador = contador - 20;
+
+
+            }
+
+            Console.WriteLine("fin");
+        }
 
 
     }
