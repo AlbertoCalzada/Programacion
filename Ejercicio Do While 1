@@ -10,6 +10,14 @@ namespace Ejercicios_Do_While_y_Switch
 
             int mainnum = int.Parse(Console.ReadLine());
 
+            while (mainnum == 0)
+            {
+
+                Console.WriteLine("El numero introducido es incorrecto, introduzca otro numero");
+                mainnum = int.Parse(Console.ReadLine());
+            }
+            
+
             Console.WriteLine(Ejercicio1(mainnum));
             
             //Console.WriteLine("El resultado es  " +mainnum);
@@ -23,11 +31,11 @@ namespace Ejercicios_Do_While_y_Switch
         {
             int number = int.Parse(Console.ReadLine());
             int producto = num1;
-
+            
             do
             {
                 Console.WriteLine("Dame un numero");
-
+                
 
                 if (number % num1 == 0 && number!=0)
                 {
@@ -39,6 +47,7 @@ namespace Ejercicios_Do_While_y_Switch
 
                     Console.WriteLine("Este numero no se va a acumular");
                 }
+
                 number = int.Parse(Console.ReadLine());
 
             } while (number != 0);
