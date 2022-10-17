@@ -1,0 +1,53 @@
+using System;
+
+namespace Ejercicio2Dowhile
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Elija una opción del 1 al 4 para descubrir lo que has ganado");
+            Menu();
+        }
+
+
+        static int Menu()
+        {
+
+            int menu = int.Parse(Console.ReadLine());
+
+            switch (menu)
+            {
+
+                case 1:
+                Console.WriteLine("Has ganado un ordenador nuevo");
+                    
+                    break;
+
+                case 2:
+                    Console.WriteLine("Has ganado una mesa nuevo");
+
+                    break;
+
+                case 3:
+                    Console.WriteLine("Has ganado un ramo de flores");
+
+                    break;
+
+                case 4:
+                    Console.WriteLine("Has ganado un PIN");
+
+                    break;
+
+
+                default:
+                    Console.WriteLine("Lo siento, introduce un número correcto");
+                    break;
+
+            }
+            return menu;
+        }
+
+    
+    }
+}

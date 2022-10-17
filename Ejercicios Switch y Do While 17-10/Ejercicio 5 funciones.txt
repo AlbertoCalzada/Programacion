@@ -1,0 +1,44 @@
+using System;
+
+namespace Ejercicio_5_Funciones
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Introduceme un numero para ver si es primo o no");
+            int num1 = int.Parse(Console.ReadLine());
+            bool primo = true;
+            Console.WriteLine(VerdaderoFalso(num1, primo));
+        }
+
+
+        static bool VerdaderoFalso ( int a, bool b)
+        {
+            int result;
+
+            bool primo = true;
+           
+            switch (a % 2 !=0)
+            {
+
+                case true:
+                    Console.WriteLine("El numero es primo");
+                    return primo;
+                    break;
+
+                default:
+                    Console.WriteLine("El numero no es primo");
+                    return primo = false;
+                    break;
+
+
+
+            }
+
+            
+            
+
+        }
+    }
+}
