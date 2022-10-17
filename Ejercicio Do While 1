@@ -1,0 +1,54 @@
+using System;
+
+namespace Ejercicios_Do_While_y_Switch
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Introduce varios números aleatorios");
+
+            int mainnum = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(Ejercicio1(mainnum));
+            
+            //Console.WriteLine("El resultado es  " +mainnum);
+            
+
+
+        }
+
+
+        static int Ejercicio1( int num1)
+        {
+            int number = int.Parse(Console.ReadLine());
+            int producto = num1;
+
+            do
+            {
+                Console.WriteLine("Dame un numero");
+
+
+                if (number % num1 == 0 && number!=0)
+                {
+                    producto = producto * number;
+
+                }
+                else
+                {
+
+                    Console.WriteLine("Este numero no se va a acumular");
+                }
+                number = int.Parse(Console.ReadLine());
+
+            } while (number != 0);
+
+
+            return producto;
+
+
+
+
+        }
+    }
+}
