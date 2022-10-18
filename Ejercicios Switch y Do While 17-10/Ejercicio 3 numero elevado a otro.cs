@@ -10,20 +10,29 @@ namespace Ejercicio3DoWhile
             double a = int.Parse(Console.ReadLine());
             double b = int.Parse(Console.ReadLine());
             Console.WriteLine(PrimeroElevadoSegundo(a, b));
-            
+           
 
         }
 
 
-        static double PrimeroElevadoSegundo (double num1, double num2)
+        static double PrimeroElevadoSegundo(double num1, double num2)
         {
+            int contador=1;
+            double elevacion = num1;
+            do
+            {
 
-            double result = Math.Pow(num1, num2);
+                ;
+                elevacion = elevacion * num1;
+                contador++;
+                
+            } while (contador < num2);
+            //double result = Math.Pow(num1, num2);
 
 
-         
 
-            return result;
+
+            return elevacion;
 
 
         }
