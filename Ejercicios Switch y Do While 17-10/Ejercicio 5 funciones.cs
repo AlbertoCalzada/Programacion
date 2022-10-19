@@ -6,12 +6,72 @@ namespace Ejercicio_5_Funciones
     {
         static void Main(string[] args)
         {
-            
+
             Console.WriteLine("Introduceme un numero para ver si es primo o no");
             int num1 = int.Parse(Console.ReadLine());
             bool primo = true;
             Console.WriteLine(VerdaderoFalso(num1, primo));
         }
+
+
+
+        static void Ejercicio5()
+        {
+            Console.WriteLine("Dime el número que quieras saber si es primo o compuesto: ");
+            int primenum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Para saber si el número es primo escribe true");
+            Console.WriteLine("Para saber si el número es compuesto escribe false");
+            bool prime;
+            prime = Convert.ToBoolean(Console.ReadLine());
+            bool answer = ISPrimeNumber(primenum, prime);
+            if (prime == true && answer == true)
+            {
+                Console.WriteLine("El número " + primenum + " es primo");
+            }
+            else
+            {
+                if (prime == true)
+                {
+                    Console.WriteLine("El número " + primenum + " no es primo");
+                }
+                else
+                {
+                    if (answer == false)
+                    {
+                        Console.WriteLine("El número no es compuesto");
+                    }
+                    else
+                    {
+                        Console.WriteLine("El número es compuesto");
+                    }
+                }
+            }
+
+        }
+        static bool ISPrimeNumber(int num, bool isPrime)
+        {
+            int counter;
+            counter = 2;
+            bool prime;
+            prime = true;
+            do
+            {
+                if (num % counter == 0)
+                {
+                    prime = false;
+                }
+                counter++;
+            } while (counter < num && prime);
+            if (isPrime == true)
+            {
+                return prime;
+            }
+            else
+            {
+                return !prime;
+            }
+        }
+
 
 
         static string VerdaderoFalso(int numconsult, bool b)
@@ -25,7 +85,7 @@ namespace Ejercicio_5_Funciones
             do
             {
                 int result = numconsult % counter;
-                
+
 
                 if (result == 0)
                 {
@@ -34,7 +94,8 @@ namespace Ejercicio_5_Funciones
                     prime = false;
                     return "El numero no es primo";
 
-                } else if(numconsult==1)
+                }
+                else if (numconsult == 1)
 
                 {
                     Console.WriteLine("Valor incorrecto, introduce otro numero");
@@ -66,25 +127,25 @@ namespace Ejercicio_5_Funciones
             do
             {
                 int result = numconsult % counter;
-                
+
 
                 if (result == 0)
                 {
-                    
-                    
+
+
                     prime = false;
                 }
-                
-                    counter++;
 
-                
-              
-                
+                counter++;
 
-            } while (counter<=numconsult);
+
+
+
+
+            } while (counter <= numconsult);
         }
-            
 
-        
+
+
     }
 }
