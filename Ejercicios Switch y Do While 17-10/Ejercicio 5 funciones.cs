@@ -7,10 +7,11 @@ namespace Ejercicio_5_Funciones
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Introduceme un numero para ver si es primo o no");
-            int num1 = int.Parse(Console.ReadLine());
-            bool primo = true;
-            Console.WriteLine(VerdaderoFalso(num1, primo));
+            Ejercicio5();
+            //Console.WriteLine("Introduceme un numero para ver si es primo o no");
+            //int num1 = int.Parse(Console.ReadLine());
+            //bool primo = true;
+            //Console.WriteLine(VerdaderoFalso(num1, primo));
         }
 
 
@@ -22,7 +23,8 @@ namespace Ejercicio_5_Funciones
             Console.WriteLine("Para saber si el número es primo escribe true");
             Console.WriteLine("Para saber si el número es compuesto escribe false");
             bool prime;
-            prime = Convert.ToBoolean(Console.ReadLine());
+            prime = bool.Parse(Console.ReadLine());
+
             bool answer = ISPrimeNumber(primenum, prime);
             if (prime == true && answer == true)
             {
