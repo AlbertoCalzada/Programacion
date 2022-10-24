@@ -10,7 +10,7 @@ namespace Practica_de_Ejercicios
     {
         static void Main(string[] args)
         {
-            FloydTriangle();
+            Contador();
 
             //Console.WriteLine("Escribe un numero");
             //int num = int.Parse(Console.ReadLine());
@@ -178,32 +178,72 @@ namespace Practica_de_Ejercicios
             Console.WriteLine("Escribe un numero");
             int num = int.Parse(Console.ReadLine());
             Console.WriteLine("Escribe una letra que sustituira a ese número");
-            char letra = char.Parse(Console.ReadLine());
+            string letra = Console.ReadLine();
+            string countervalue;
 
+            for( int decenas=0; decenas<10; decenas = decenas + 1)
+            {
+                for(int unidades = 0; unidades < 10; unidades = unidades + 1) {
+
+                    string valuetoprint;
+                    if(decenas == num)
+                    {
+
+                        valuetoprint = letra;
+
+                    }
+                    else
+                    {
+
+                        valuetoprint = decenas.ToString();
+                    }
+
+                    if (unidades == num)
+                    {
+
+                        valuetoprint = valuetoprint + letra;
+
+
+                    }
+                    else
+                    {
+                        valuetoprint = valuetoprint + unidades;
+
+                    }
+
+                    Console.WriteLine(" el resultado fnal es " + valuetoprint);
+               
+
+                }
+                
+            }
         }
 
         static void Contador2(int num, char lyrics)
         {
-            string zero = "0";
-            for (int counter = 1; counter < 20; counter++)
-            {
+            
+            
+            
+            //string zero = "0";
+            //for (int counter = 1; counter < 20; counter = counter + 1)
+            //{
 
-                if (counter == num)
-                {
-                    Console.WriteLine(zero + zero + lyrics);
+            //    if (counter == num)
+            //    {
+            //        Console.WriteLine(zero + zero + lyrics);
 
-                }
-                else if (counter > 9)
-                {
-                    Console.WriteLine(zero + counter);
+            //    }
+            //    else if (counter >= 10)
+            //    {
+            //        Console.WriteLine(zero + counter);
 
-                }
-                else
-                {
-                    Console.WriteLine(zero + zero + counter);
-                }
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine(zero + zero + counter);
+            //    }
 
-            }
+            //}
 
 
 
