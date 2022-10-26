@@ -26,17 +26,37 @@ namespace Rational
 
         }
 
-       
-        //public Rational Add(Rational r2)
-        //{
+
+        public Rational Add(Rational r2)
+        {
+            Rational result;
+            int numR1 = numerator * r2.denominator;
             
 
-        //}
-        public void Subtraction()
-        {
+            int numR2 = r2.numerator * denominator;
+            int den = r2.denominator * denominator;
 
+
+            result = new Rational(numR1 + numR2, den);
+            return result;
 
         }
+        public Rational Subtract(Rational r2)
+        {
+            Rational result;
+            int numR1 = numerator * r2.denominator;
+
+
+            int numR2 = r2.numerator * denominator;
+            int den = r2.denominator * denominator;
+
+
+            result = new Rational(numR1 - numR2, den);
+            return result;
+
+        }
+
+       
         public Rational Multiplication(Rational r2)
         {
             int newnum = numerator * r2.numerator;
@@ -88,10 +108,15 @@ namespace Rational
             Rational r2;
             r2 = new Rational(2, 3);
             Rational r3 = new Rational(2, 4);
+
             Rational rMult;
             Rational rDiv;
+            Rational rAdd;
+            Rational rSubtract;
 
             rMult = r1.Multiplication(r2);
+            rAdd = r1.Add(r2);
+            rSubtract = r1.Subtract(r2);
             bool b1=r1.Compare(r2); //FALSE
             bool b2=r1.Compare(r3); //TRUE
             rDiv=r1.Divide(r2);
@@ -99,6 +124,8 @@ namespace Rational
             string s = r1.Write();
             r1.Print();
 
+            Console.WriteLine("el resultado de la suma es " + rAdd.Write());
+            Console.WriteLine("el resultado de la RESTA es " + rSubtract.Write());
             Console.WriteLine("el resultado de la multiplicacion es " + rMult.Write());
             Console.WriteLine("el resultado de la DIVISON es " + rDiv.Write());
             Console.WriteLine(r1.Write()+ "==" + r2.Write() + "=" + b1);
