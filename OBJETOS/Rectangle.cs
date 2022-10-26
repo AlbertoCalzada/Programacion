@@ -6,48 +6,50 @@ namespace Rectangle
 
     class Rectangle
     {
-        double vertex1;
-        double vertex2;
-        double vertex3;
-        double vertex4;
+        Point tr;
+        Point tl;
+        Point br;
+        Point bl;
 
-        public Rectangle(double newvertex1, double newvertex2, double newvertex3, double newvertex4)
+        public Rectangle(Point tr, Point tl, Point br, Point bl)
         {
-            vertex1 = newvertex1;
-            vertex2 = newvertex2;
-            vertex3 = newvertex3;
-            vertex4 = newvertex4;
 
+            this.tr = tr;
+            this.tl = tl;
+            this.br = br;
+            this.bl = bl;
 
 
 
         }
 
-        public Rectangle(double newvertex1, double newvertex2, double newvertex3)
+        public Rectangle(Point tr, Point tl, Point br)
         {
 
-            vertex1 = newvertex1;
-            vertex2 = newvertex2;
-            vertex3 = newvertex3;
-            vertex4 = 0.0;
+
+            this.tr = tr;
+            this.tl = tl;
+            this.br = br;
+            bl = new Point();
 
 
         }
 
-        public void GetArea(double newvertex1, double newvertex2, double newvertex3)
+        public float GetArea()
         {
-            vertex1 = newvertex1;
-            vertex2 = newvertex2;
-            vertex3 = newvertex3;
-            double area = (newvertex1 + newvertex2) * newvertex3;
+            int rectbase = br.GetX() - bl.GetX();
+            int rectHeight = tr.GetY() - br.GetY();
+
+            return rectbase *rectHeight;
+
 
         }
 
-        public void PrintData()
+        public string toString()
         {
 
-            Console.WriteLine("Los datos son " + vertex1 + vertex2 + vertex3 + vertex4);
-
+            string result = "(" + x + "," + y + " )";
+            return result;
         }
 
 
@@ -57,8 +59,8 @@ namespace Rectangle
     class Point
     {
 
-        double x;
-        double y;
+        int x;
+        int y;
 
 
         public Point()
@@ -69,33 +71,33 @@ namespace Rectangle
 
         }
 
-        public Point(double newx, double newy)
+        public Point(double x, double y)
         {
 
-            x = newx;
-            y = newy;
+            this. x = x;
+            this.y = y;
 
         }
 
-        public void SetX(double newx)
+        public void SetX(int newx)
         {
 
             x = newx;
         }
 
-        public double GetX()
+        public int GetX()
         {
 
             return x;
         }
 
-        public void SetY(double newy)
+        public void SetY(int newy)
         {
 
             y = newy;
         }
 
-        public double GetY()
+        public int GetY()
         {
 
             return y;
@@ -117,7 +119,25 @@ namespace Rectangle
     {
         static void Main(string[] args)
         {
+            Point p00 = new Point(0, 0);
+            Point p11 = new Point(1, 1);
+            Point p13 = new Point(1, 3);
+            Point p33 = new Point(3, 3);
+            Point p31 = new Point(3, 1);
 
+            Point p52= new Point(5, 2);
+            Point p50 = new Point(5, 0);
+            Point p02 = new Point(0, 2);
+
+            Rectangle rect1 = new Rectangle(p33, p13, p31, p11);
+            Rectangle rect2 = new Rectangle(p52, p02, p50);
+
+            Console.WriteLine("Rectangulo 1 : " + rect1.toString());
+            Console.WriteLine("Rectangulo 2 : " + rect2.toString());
+
+            Console.WriteLine("fin");
         }
+
+        // añadir metodo dibujar esto con asteriscos
     }
 }
