@@ -2,45 +2,52 @@ using System;
 
 namespace Circle
 {
-    
+
     class Circle
     {
 
-        double x;
-        double y;
+        int x;
+        int y;
         double radio;
+        const double PI = 3.141592;
 
-         
         public Circle()
         {
             x = 0;
             y = 0;
-            radio = 1;
+            radio = 0;
 
         }
 
         public Circle(double newradio)
         {
-            radio=newradio;
+            radio = newradio;
             x = 0;
             y = 0;
 
         }
-        public Circle(double newradio, double newx, double newy)
+        public Circle( int newx, int newy, double newradio)
         {
-            radio= newradio;
+            radio = newradio;
             x = newx;
             y = newy;
 
         }
 
-        
+
 
         public void SetArea()
         {
-            double PI = 3.141592;
+            
             double area = PI * radio * radio;
 
+        }
+
+        public double GetArea()
+        {
+            
+
+            return PI * radio * radio;
         }
 
         public void SetLength()
@@ -50,9 +57,16 @@ namespace Circle
 
         }
 
+        public double GetLength()
+        {
+            double PI = 3.141592;
+            return  2 * PI * radio;
+
+        }
+
         public void PrintDate()
         {
-            Console.WriteLine("Los datos son");
+            Console.WriteLine("Los datos son " + x + "x " + y + "y "+ radio + " radio ");
 
         }
     }
@@ -71,12 +85,19 @@ namespace Circle
 
             C1 = new Circle();
             C2 = new Circle(5);
-            C3 = new Circle(5,4,3);
+            C3 = new Circle(5, 4, 3);
 
             C3.SetArea();
             C3.SetLength();
-            Console.WriteLine("El area y la longitud de ");
+            
             C3.PrintDate();
+            Console.WriteLine(C1.GetArea());
+            Console.WriteLine(C2.GetArea());
+            Console.WriteLine(C3.GetArea());
+            Console.WriteLine(C1.GetLength());
+            Console.WriteLine(C2.GetLength());
+            Console.WriteLine(C3.GetLength());
+
         }
     }
 }
