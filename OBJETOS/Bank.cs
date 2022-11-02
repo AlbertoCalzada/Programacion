@@ -1,5 +1,21 @@
 namespace Banco
 {
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            BankAccount B1 = new BankAccount("Jorge");
+            BankAccount B2 = new BankAccount("Jorge", 150000);
+
+            B1.ToDeposit(20);
+            B2.ToDeposit(50000);
+
+            Console.WriteLine(B1.Write());
+            Console.WriteLine(B2.Write());
+        }
+    }
+    
+    
     class BankAccount
     {
 
