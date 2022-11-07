@@ -1,16 +1,19 @@
+using System;
 
-class Program
+namespace Person
+{
+    class Program
     {
         static void Main(string[] args)
         {
 
-            Person p1= new Person();
-            Person p2= new Person("Juan", 23, 'M');
-            Person p3= new Person("Rocio", 17, "53905661", 'F', 1.67f, 120);
+            Person p1 = new Person();
+            Person p2 = new Person("Juan", 23, 'M');
+            Person p3 = new Person("Rocio", 17, "53905661", 'F', 1.67f, 120);
         }
     }
 
-class Person
+    class Person
     {
 
         string name;
@@ -20,15 +23,15 @@ class Person
         float height;
         float weight;
 
-        
+
         public Person()
         {
             age = 0;
             gender = 'M';
-            height = 1.70f;
-            weight = 80.5f;
+            height = 0;
+            weight = 0;
 
-            
+
         }
 
         public Person(string name, int age, char gender)
@@ -36,16 +39,16 @@ class Person
             this.name = name;
             this.age = age;
             this.gender = gender;
-            height = 1.70f;
-            weight = 80.5f;
+            height = 0;
+            weight = 0;
 
         }
 
         public Person(string name, int age, string dni, char gender, float height, float weight)
         {
 
-            this.name=name;
-            this.age=age;
+            this.name = name;
+            this.age = age;
             this.dni = dni;
             this.gender = gender;
             this.height = height;
@@ -58,10 +61,12 @@ class Person
             if (imc < 20)
             {
                 return -1;
-            } else if(imc>=20 && imc <= 25)
+            }
+            else if (imc >= 20 && imc <= 25)
             {
                 return 0;
-            } else
+            }
+            else
             {
                 return 1;
             }
@@ -116,9 +121,9 @@ class Person
         public void GenerateDNI(double dni)
         {
 
-            
+
             double result = dni % 23;
-            Console.WriteLine( "Comprueba la letra sabiendo que el resultado es " + result);
+            Console.WriteLine("Comprueba la letra sabiendo que el resultado es " + result);
 
 
         }
@@ -144,6 +149,7 @@ class Person
 
 
 
-        
+
 
     }
+}
