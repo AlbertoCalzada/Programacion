@@ -2,6 +2,9 @@ using System;
 
 namespace Bank
 {
+    using System;
+
+
     class Program
     {
         static void Main(string[] args)
@@ -14,11 +17,11 @@ namespace Bank
             B1.ToWithDraw(40);
             Console.WriteLine(B1.Write());
             Console.WriteLine();
-            
+
             B2.ToDeposit(50000);
             Console.WriteLine(B2.Write());
 
-           
+
         }
     }
 
@@ -77,42 +80,44 @@ namespace Bank
             {
                 return accountholder + " has realizado una transacción erronea, intentalo de nuevo";
             }
-            
+
         }
 
         public bool ToDeposit(float requiredamount)
         {
-            
+
             if (requiredamount <= 0)
             {
-                Console.WriteLine("No has depositado una cantidad correcta " +accountholder);
+                Console.WriteLine("No has depositado una cantidad correcta " + accountholder);
                 return false;
             }
             else
             {
-                Console.WriteLine("El dinero ha sido sumado a tu cuenta con éxito " + accountholder);
+                Console.WriteLine("El dinero ha sido sumado a tu cuenta con éxito " + accountholder + "intentalo de nuevo");
                 amount = amount + requiredamount;
                 return true;
             }
-            
+
         }
 
         public bool ToWithDraw(float requiredamount)
         {
-            amount = amount - requiredamount;
+            
             if (requiredamount <= 0 || requiredamount > amount)
             {
-                Console.WriteLine("El dinero NO ha sido retirado de tu cuenta con éxito " + accountholder);
+                //Console.WriteLine("El dinero NO ha sido retirado de tu cuenta con éxito " + accountholder);
                 return false;
             }
             else
             {
                 Console.WriteLine("El dinero ha sido retirado de tu cuenta con éxito " + accountholder);
+                amount = amount - requiredamount;
                 return true;
             }
 
-            
+
         }
     }
 }
+
 
