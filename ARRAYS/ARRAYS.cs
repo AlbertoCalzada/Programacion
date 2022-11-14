@@ -85,26 +85,26 @@ namespace Arrays
 
         }
 
-        static void Ejercicio3()
+        static void OneToRigth()
         {
-            int[] array = new int[20];
-            Random r = new Random();
-            // creacion del array
-            for (int i = 0; i < array.Length; ++i)
+            Random array = new Random();
+            int[] nums = new int[20];
+            for (int index = 0; index < nums.Length; index = index + 1)
             {
-                array[i] = r.Next(0, 20);
-                Console.Write(array[i] + " ");
+                nums[index] = array.Next(0, 50);
+                Console.Write(nums[index] + " ");
             }
+            int last = nums[nums.Length - 1];
+            for (int index = nums.Length - 2; index >= 0; --index)
+            {
+                nums[index + 1] = nums[index];
+            }
+            nums[0] = last;
             Console.WriteLine();
-            //rotar
-            int numberlast = array[array.Length - 1];
-            for (int i = array.Length - 2; i >= 01; ++i)
+            for (int index = 0; index < nums.Length; ++index)
             {
-                array[i] = array[i + 1];
-                Console.Write(array[i] + " ");
+                Console.Write(nums[index] + " ");
             }
-
-        }
 
         static void Ejercicio4()
         {
