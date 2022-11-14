@@ -6,9 +6,33 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            Ejercicio4();
+            Ejercicio5(10,1,20);
         }
 
+        
+        static void Ejercicio5(int narray, int min, int max)
+        {
+            int[] array = new int[narray];
+            Random r = new Random();
+            //dando valores al array
+            for (int i = 0; i < array.Length; ++i)
+            {
+                array[i] = r.Next(min, max);
+                Console.Write(array[i] + " ");
+            }
+            //ordenando el array de menor a mayor
+            Console.WriteLine();
+            Array.Sort(array);
+
+            for (int i = 0; i < array.Length; ++i)
+            {
+                
+                Console.Write(array[i]+" ");
+            }
+                     
+        }
+        
+        
         static void Ejercicio1()
         {
             //crear array
@@ -43,9 +67,9 @@ namespace Arrays
 
             //sacar valor mas alto y el mas bajo
             int higher = array[0];
-            int lower = array[1];
+            int lower = array[0];
 
-            for (int i = 0; i < array.Length; ++i)
+            for (int i = 1; i < array.Length; ++i)
             {
                 if (array[i] > higher)
                 {
@@ -68,14 +92,16 @@ namespace Arrays
             // creacion del array
             for (int i = 0; i < array.Length; ++i)
             {
-                array[i] = r.Next(0, 50);
-                Console.WriteLine("array 1: " + array[i]);
+                array[i] = r.Next(0, 20);
+                Console.Write(array[i] + " ");
             }
+            Console.WriteLine();
             //rotar
-            for (int i = 0; i < array.Length - 1; ++i)
+            int numberlast = array[array.Length - 1];
+            for (int i = array.Length - 2; i >= 01; ++i)
             {
                 array[i] = array[i + 1];
-                Console.WriteLine("array 2 " + array[i]);
+                Console.Write(array[i] + " ");
             }
 
         }
@@ -93,21 +119,21 @@ namespace Arrays
                 Console.WriteLine(array1[i]);
             }
             Console.WriteLine();
-            //elevando al cuadrado el segundo
-            for(int i= 0; i < array2.Length; ++i)
+            //elevando al cuadrado 
+            for (int i = 0; i < array2.Length; ++i)
             {
                 array2[i] = Math.Pow(array1[i], 2);
                 Console.WriteLine("el array2 es " + array2[i]);
-                
+
             }
             Console.WriteLine();
-            //elevando al cubo el tercero
+            //elevando al cubo 
             for (int i = 0; i < array3.Length; ++i)
             {
-                /*array3[i] = array1[i] * array1[i] * array1[i]*/;
+                
                 array3[i] = Math.Pow(array1[i], 3);
                 Console.WriteLine("el array3 es " + array3[i]);
-                
+
 
             }
 
