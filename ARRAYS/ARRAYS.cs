@@ -6,10 +6,9 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            Ejercicio5(10,1,20);
+            Ejercicio5(10, 1, 21);
         }
 
-        
         static void Ejercicio5(int narray, int min, int max)
         {
             int[] array = new int[narray];
@@ -21,18 +20,28 @@ namespace Arrays
                 Console.Write(array[i] + " ");
             }
             //ordenando el array de menor a mayor
+            // comparar 5 , 2 ,3 ,4 ,7,5,9,4,12,85
             Console.WriteLine();
-            Array.Sort(array);
-
             for (int i = 0; i < array.Length; ++i)
             {
-                
-                Console.Write(array[i]+" ");
+                for (int j = i + 1; j < array.Length; ++j)
+                {
+                    if (array[i] > array[j])
+                    {
+                        int oldnum = array[i];
+                        int newnum = array[j];
+                        array[j] = oldnum;
+                        array[i] = newnum;
+                    }
+                }
             }
-                     
+            for (int i = 0; i < array.Length; ++i)
+            {
+                Console.Write(array[i] + " ");
+            }
         }
-        
-        
+
+
         static void Ejercicio1()
         {
             //crear array
@@ -106,37 +115,38 @@ namespace Arrays
                 Console.Write(nums[index] + " ");
             }
 
-        static void Ejercicio4()
-        {
-            double[] array1 = new double[20];
-            double[] array2 = new double[20];
-            double[] array3 = new double[20];
-            Random r = new Random();
-            //rellenando el primero
-            for (int i = 0; i < array1.Length; ++i)
+            static void Ejercicio4()
             {
-                array1[i] = r.Next(0, 101);
-                Console.WriteLine(array1[i]);
-            }
-            Console.WriteLine();
-            //elevando al cuadrado 
-            for (int i = 0; i < array2.Length; ++i)
-            {
-                array2[i] = Math.Pow(array1[i], 2);
-                Console.WriteLine("el array2 es " + array2[i]);
+                double[] array1 = new double[20];
+                double[] array2 = new double[20];
+                double[] array3 = new double[20];
+                Random r = new Random();
+                //rellenando el primero
+                for (int i = 0; i < array1.Length; ++i)
+                {
+                    array1[i] = r.Next(0, 101);
+                    Console.WriteLine(array1[i]);
+                }
+                Console.WriteLine();
+                //elevando al cuadrado 
+                for (int i = 0; i < array2.Length; ++i)
+                {
+                    array2[i] = Math.Pow(array1[i], 2);
+                    Console.WriteLine("el array2 es " + array2[i]);
+
+                }
+                Console.WriteLine();
+                //elevando al cubo 
+                for (int i = 0; i < array3.Length; ++i)
+                {
+
+                    array3[i] = Math.Pow(array1[i], 3);
+                    Console.WriteLine("el array3 es " + array3[i]);
+
+
+                }
 
             }
-            Console.WriteLine();
-            //elevando al cubo 
-            for (int i = 0; i < array3.Length; ++i)
-            {
-                
-                array3[i] = Math.Pow(array1[i], 3);
-                Console.WriteLine("el array3 es " + array3[i]);
-
-
-            }
-
         }
     }
 }
