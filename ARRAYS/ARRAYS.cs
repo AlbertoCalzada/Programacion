@@ -6,9 +6,117 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            Ejercicio5(10, 1, 21);
+            insidearray(5);
         }
 
+        
+        static void insidearray(int n)
+        {
+            int[] inside = new int[n];
+            Random r = new Random();
+            for (int i = 0; i < inside.Length; ++i)
+            {
+                inside[i] = r.Next(0, 101);
+                Console.WriteLine(inside[i]);
+            }
+            Console.WriteLine("Introduceme un numero para saber si esta dentro del array");
+            int inserted = int.Parse(Console.ReadLine());
+            for (int i = 0; i < inside.Length; ++i)
+            {
+                for (int j = 1; inserted != inside[]; ++j)
+                {
+                    if (inserted == inside[i])
+                    {
+
+                        Console.WriteLine("El número esta dentro del array");
+                    }
+                    else
+                    {
+                        Console.WriteLine("El numero no esta dentro del array, introduce otro número por favor");
+                        inserted = int.Parse(Console.ReadLine());
+                    }
+                }
+                    
+            }
+
+        }
+        
+        
+        static void Multiples(int max) //400 es el valor maximo
+        {
+            int[] multiples = new int[20];
+            Random r = new Random();
+            //rellenando el array
+            for (int i = 0; i < multiples.Length; ++i)
+            {
+                multiples[i] = r.Next(0, max);
+            }
+            Console.WriteLine("Quieres resaltar los múltiplos de 5 o 7");
+            int resalted = int.Parse(Console.ReadLine());
+            if(resalted == 5)
+            {
+                for (int i = 0; i < multiples.Length; ++i)
+                {
+                    if (multiples[i] % 5 == 0)
+                    {
+                        Console.WriteLine("["+multiples[i]+"]");
+                    }
+                    else
+                    {
+                        Console.WriteLine(multiples[i]);
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < multiples.Length; ++i)
+                {
+                    if (multiples[i] % 7 == 0)
+                    {
+                        Console.WriteLine("[" + multiples[i] + "]");
+                    }
+                    else
+                    {
+                        Console.WriteLine(multiples[i]);
+                    }
+                }
+            }
+        }
+        
+        
+        static void TempArray()
+        {
+            int[] temp = new int[12];
+            Random r = new Random();
+            //rellenando el array
+            for(int i =0; i < temp.Length; ++i)
+            {
+                if(i<5|| i > 9)
+                {
+                    temp[i] = r.Next(5, 20);
+                }
+                else
+                {
+                    temp[i] = r.Next(15, 30);
+                }
+                
+                Console.WriteLine(temp[i]);
+            }
+            //dibujando el array
+            string asterisk = "*";
+
+            for(int i = 0; i < temp.Length; ++i)
+            {
+                Console.WriteLine();
+                
+             for(int j=0; j < temp[i]; ++j)
+                {
+                    Console.Write(asterisk+" ");
+                }
+            }
+        }
+        
+        
         static void Ejercicio5(int narray, int min, int max)
         {
             int[] array = new int[narray];
