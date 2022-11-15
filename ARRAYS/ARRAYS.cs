@@ -23,19 +23,21 @@ namespace Arrays
             int inserted = int.Parse(Console.ReadLine());
             for (int i = 0; i < inside.Length; ++i)
             {
-                for (int j = 1; inserted != inside[]; ++j)
+                
+                for(int j=0; i < inside.Length; ++i) {
+                if (inserted != inside[i])
                 {
-                    if (inserted == inside[i])
-                    {
 
-                        Console.WriteLine("El número esta dentro del array");
-                    }
-                    else
-                    {
-                        Console.WriteLine("El numero no esta dentro del array, introduce otro número por favor");
-                        inserted = int.Parse(Console.ReadLine());
-                    }
+                    Console.WriteLine("El numero no esta dentro del array, introduce otro número por favor");
+                    inserted = int.Parse(Console.ReadLine());
+
                 }
+                else
+                {
+                    Console.WriteLine("El numero es el correcto");
+                }
+            }
+                
                     
             }
 
