@@ -9,7 +9,18 @@ namespace Arrays
             insidearray(10);
         }
 
-        
+        static int [] CreateRandomArray(int arraysize, int min, int max) //para crear y rellenar array sin tener que repetir código
+        {
+            int[] array = new int[arraysize];
+            Random r = new Random();
+
+            for (int i = 0; i < array.Length; ++i)
+            {
+                array[i] = r.Next(min, max);
+                Console.WriteLine(array[i] + " ");
+            }
+            return array;
+        }
         static void insidearray(int n)
         {
             int[] inside = new int[n];
@@ -20,6 +31,7 @@ namespace Arrays
                 inside[i] = r.Next(0, 101);
                 Console.WriteLine(inside[i]+ " ");
             }
+            Console.WriteLine();
             bool intento = false;
             do
             {
