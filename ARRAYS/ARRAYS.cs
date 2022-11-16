@@ -6,7 +6,7 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            Multiples(401);
+            insidearray(10);
         }
 
         
@@ -14,32 +14,41 @@ namespace Arrays
         {
             int[] inside = new int[n];
             Random r = new Random();
+            
             for (int i = 0; i < inside.Length; ++i)
             {
                 inside[i] = r.Next(0, 101);
-                Console.WriteLine(inside[i]);
+                Console.WriteLine(inside[i]+ " ");
             }
-            Console.WriteLine("Introduceme un numero para saber si esta dentro del array");
-            int inserted = int.Parse(Console.ReadLine());
-            for (int i = 0; i < inside.Length; ++i)
+            bool intento = false;
+            do
             {
-                
-                for(int j=0; i < inside.Length; ++i) {
-                if (inserted != inside[i])
-                {
 
-                    Console.WriteLine("El numero no esta dentro del array, introduce otro número por favor");
-                    inserted = int.Parse(Console.ReadLine());
 
-                }
-                else
+                Console.WriteLine("Introduceme un numero para saber si esta dentro del array");
+                int inserted = int.Parse(Console.ReadLine());
+
+                for (int i = 0; i < inside.Length; ++i)
                 {
-                    Console.WriteLine("El numero es el correcto");
+                    if (inside[i] == inserted)
+                    {
+                        Console.WriteLine("esta dentro");
+                        intento = true;
+                    }
                 }
-            }
+                if (intento == false)
+                {
+                    Console.WriteLine("el numero introduce no se eucnetra intentalo de nuevo");
+                }
+            } while (intento != true);
+
+            
+            
+            
+            
                 
                     
-            }
+            
 
         }
         
