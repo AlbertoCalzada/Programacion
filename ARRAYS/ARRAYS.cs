@@ -6,7 +6,7 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            Multiples(400);
+            Multiples(401);
         }
 
         
@@ -65,11 +65,11 @@ namespace Arrays
                     }
                     else
                     {
-                        Console.Write(" "+multiples[i]);
+                        Console.Write(" "+multiples[i]+" ");
                     }
                 }
             }
-            else
+            else if (resalted == 7)
             {
                 for (int i = 0; i < multiples.Length; ++i)
                 {
@@ -79,7 +79,7 @@ namespace Arrays
                     }
                     else
                     {
-                        Console.Write(" " + multiples[i]);
+                        Console.Write(" " + multiples[i] + " ");
                     }
                 }
             }
@@ -95,7 +95,7 @@ namespace Arrays
             {
                 if(i<5|| i > 9)
                 {
-                    temp[i] = r.Next(5, 20);
+                    temp[i] = r.Next(5, 18);
                 }
                 else
                 {
