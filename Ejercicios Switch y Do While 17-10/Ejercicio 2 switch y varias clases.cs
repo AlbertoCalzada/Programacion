@@ -31,17 +31,49 @@ namespace Arrays
                     reemplace(array, 2, 6); 
                     break;
                 case 5:
+                    swap(array, 2, 7);
                     break;
                 case 6:
                     Invertarray(array);
                     break;
                 case 7:
+                    Rotateleft(array);
                     break;
                 case 8:
+                    Console.WriteLine("Fin del programa");
                     break;
             }
         }
 
+        static void Rotateleft(int[] array)
+        {
+            
+            for (int i = array.Length - 2; i >= 0; --i)
+            {
+                array[i + 1] = array[i];
+            }
+            
+            Console.WriteLine();
+            for (int i = 0; i < array.Length; ++i)
+            {
+                Console.Write(array[i] + " ");
+            }
+        }
+        
+        static void swap(int[] array, int position1, int position2)
+        {
+            for (int i = 0; i < array.Length; ++i)
+            {
+                if (i == position1)
+                {
+                    int first = array[position1];
+                    int last = array[position2];
+                    array[position1] = last;
+                    array[position2] = first;
+                }
+                Console.WriteLine(array[i] + " ");
+            }
+        }
         static int zerotimes(int[] array)
         {
             int zero = 0;
