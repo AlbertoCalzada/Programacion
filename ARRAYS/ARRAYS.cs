@@ -55,32 +55,15 @@ namespace Arrays
             }
             Console.WriteLine("Quieres resaltar los múltiplos de 5 o 7");
             int resalted = int.Parse(Console.ReadLine());
-            if(resalted == 5)
+            for (int i = 0; i < multiples.Length; ++i)
             {
-                for (int i = 0; i < multiples.Length; ++i)
+                if (multiples[i] % resalted == 0 && multiples[i] != 0)
                 {
-                    if (multiples[i] % 5 == 0 && multiples[i] != 0)
-                    {
-                        Console.Write("["+multiples[i]+"]");
-                    }
-                    else
-                    {
-                        Console.Write(" "+multiples[i]+" ");
-                    }
+                    Console.Write("[" + multiples[i] + "]");
                 }
-            }
-            else if (resalted == 7)
-            {
-                for (int i = 0; i < multiples.Length; ++i)
+                else
                 {
-                    if (multiples[i] % 7 == 0 && multiples[i]!=0)
-                    {
-                        Console.Write("[" + multiples[i] + "]"); ;
-                    }
-                    else
-                    {
-                        Console.Write(" " + multiples[i] + " ");
-                    }
+                    Console.Write(" " + multiples[i] + " ");
                 }
             }
         }
