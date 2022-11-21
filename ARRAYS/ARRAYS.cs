@@ -6,8 +6,194 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            insidearray(10);
+            ArrayMenu();
         }
+
+        
+        static void ArrayMenu()
+        {
+            int[] array = CreateRandomArray(10, 0, 10);
+            Console.WriteLine("\n");
+            Console.WriteLine("1.Función recibe un array y devuelve el número de 0 que hay dentro");
+            Console.WriteLine("2.Función recibe un array y devuelve el resultado de sumar los números pares del array");
+            Console.WriteLine("3.Función recibe un array y un entero y devuelve el número de veces que está ese número dentro del array");
+            Console.WriteLine("4.Función recibe un array y dos valores(antiguo y nuevo) y la función va a sustituir el valor antiguo por el nuevo");
+            Console.WriteLine("5.Función recibe un array y dos valores que van a representar la posciones en el array para luego intercambiar sus valores");
+            Console.WriteLine("6.Función recibe un array y lo invierte");
+            Console.WriteLine("7.Función que rota el array a la izquierda");
+            Console.WriteLine("8.Salir del programa");
+            Console.WriteLine("¿Que opción deseas?"); 
+            int menu = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            switch (menu)
+            {
+                case 1:
+                    Console.WriteLine(" hay "+zerotimes(array) + " ceros en el array"); 
+                    break;
+                case 2:
+                    Console.WriteLine("el resultado es "+Sumpairs(array));
+                    break;
+                case 3:
+                    Console.WriteLine("hay " + ntimes(array,5)+ " en el array");
+                    break;
+                case 4:
+                    reemplace(array, 2, 6); 
+                    break;
+                case 5:
+                    swap(array, 2, 7);
+                    break;
+                case 6:
+                    Invertarray(array);
+                    break;
+                case 7:
+                    Rotateleft(array);
+                    break;
+                case 8:
+                    Console.WriteLine("Fin del programa");
+                    break;
+            }
+        }
+
+        static void Rotateleft(int[] array)
+        {
+
+            for (int i = 0; i < array.Length; ++i)
+            {
+                if (i == 0)
+                {
+                    array[i] = array[array.Length-1];
+                }
+                else
+                {
+                    int last= array[array[i]]-1;
+                    array[i] = last;
+                }
+                Console.Write(array[i] + " ");
+            }
+            
+            //Console.WriteLine();
+            //for (int i = 0; i < array.Length; ++i)
+            //{
+            //    Console.Write(array[i] + " ");
+            //}
+        }
+        
+        static void swap(int[] array, int position1, int position2)
+        {
+            for (int i = 0; i < array.Length; ++i)
+            {
+                if (i == position1)
+                {
+                    int first = array[position1];
+                    int last = array[position2];
+                    array[position1] = last;
+                    array[position2] = first;
+                }
+                Console.WriteLine(array[i] + " ");
+            }
+        }
+        static int zerotimes(int[] array)
+        {
+            int zero = 0;
+            int nzeros = 0;
+            for (int i = 0; i < array.Length; ++i)
+            {
+
+
+                if (array[i] == zero)
+                {
+                    ++nzeros;
+                }
+                
+            }
+            
+
+            return nzeros;
+        }
+
+        static int Sumpairs(int[] array)
+        {
+            int zero = 0;
+            int sumnumpairs = 0;
+            for (int i = 0; i < array.Length; ++i)
+            {
+
+
+                if (array[i] % 2 == zero)
+                {
+                    sumnumpairs = sumnumpairs + array[i];
+                }
+
+            }
+            return sumnumpairs;
+        }
+
+        static int ntimes(int[] array, int number)
+        {
+
+            
+            int nnumber = 0;
+            for (int i = 0; i < array.Length; ++i)
+            {
+
+
+                if (array[i] == number)
+                {
+                    ++nnumber;
+                }
+
+            }
+
+            return nnumber;
+        }
+
+        static void reemplace(int[] array, int oldnum, int newnum)
+        {
+            for (int i = 0; i < array.Length; ++i)
+            {
+                if (array[i] == oldnum)
+                {
+                    array[i] = newnum;
+                }
+                Console.WriteLine(array[i] + " ");
+            }
+
+            
+        }
+
+        static void Invertarray(int[] array)
+        {
+
+            int secondcounter = 1;
+            //array = new int[arraysize];
+            for (int i = 0; i < array.Length; ++i)
+            {
+                if (i == 0)
+                {
+                    int first = array[i];
+                    int last = array[array.Length - 1];
+                    array[i] = last;
+                    array[array.Length - 1] = first;
+                }
+                else
+                {
+                    if (i < (array.Length / 2))
+                    {
+                        int first = array[i];
+                        int last = array[array.Length - secondcounter];
+                        array[i] = last;
+                        array[array.Length - secondcounter] = first;
+                    }
+                    
+                    
+                    
+                }
+                ++secondcounter;
+                Console.Write(array[i]+ " " );
+                
+            }
+        }
+
 
         static int [] CreateRandomArray(int arraysize, int min, int max) //para crear y rellenar array sin tener que repetir código
         {
@@ -17,7 +203,7 @@ namespace Arrays
             for (int i = 0; i < array.Length; ++i)
             {
                 array[i] = r.Next(min, max);
-                Console.WriteLine(array[i] + " ");
+                Console.Write(array[i] + " ");
             }
             return array;
         }
