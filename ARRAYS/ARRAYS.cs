@@ -4,7 +4,7 @@ namespace Arrays
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) //\t es una tabulador
         {
             ArrayMenu();
         }
@@ -22,55 +22,68 @@ namespace Arrays
             Console.WriteLine("6.Función recibe un array y lo invierte");
             Console.WriteLine("7.Función que rota el array a la izquierda");
             Console.WriteLine("8.Salir del programa");
-            Console.WriteLine("¿Que opción deseas?"); 
+            Console.WriteLine("¿Que opción deseas?");
             int menu = int.Parse(Console.ReadLine());
             Console.WriteLine();
-            switch (menu)
-            {
-                case 1:
-                    Console.WriteLine(" hay "+zerotimes(array) + " ceros en el array"); 
-                    break;
-                case 2:
-                    Console.WriteLine("el resultado es "+Sumpairs(array));
-                    break;
-                case 3:
-                    Console.WriteLine("hay " + ntimes(array,5)+ " en el array");
-                    break;
-                case 4:
-                    reemplace(array, 2, 6); 
-                    break;
-                case 5:
+            do { 
+
+                switch (menu)
+                {
+                    case 1:
+                        Console.WriteLine(" hay " + zerotimes(array) + " ceros en el array");
+                        break;
+                    case 2:
+                        Console.WriteLine("el resultado es " + Sumpairs(array));
+                        break;
+                    case 3:
+                        Console.WriteLine("hay " + ntimes(array, 5) + " en el array");
+                        break;
+                    case 4:
+                        reemplace(array, 2, 6);
+                        break;
+                    case 5:                  
                     swap(array, 2, 7);
-                    break;
-                case 6:
-                    Invertarray(array);
-                    break;
-                case 7:
-                    Rotateleft(array);
-                    break;
-                case 8:
-                    Console.WriteLine("Fin del programa");
-                    break;
-            }
+                        break;
+                    case 6:
+                        Invertarray(array);
+                        break;
+                    case 7:
+                        Rotateleft(array);
+                        break;
+                    case 8:
+                        Console.WriteLine("Fin del programa");
+                        break;
+                    default:
+                        Console.WriteLine("Esa opcion no es valida");
+                        break;
+                }
+            } while (menu != 0) ;
+            
+        }
+
+        static int ReadInt(string message)
+        {
+            
+            int n;
+            do
+            {
+                Console.Write(message);
+            } while (!int.TryParse(Console.ReadLine(), out n));
+            return n;
         }
 
         static void Rotateleft(int[] array)
         {
 
-            for (int i = 0; i < array.Length; ++i)
+            int aux = array[0];
+            for (int i = 0; i < array.Length-1; ++i)
             {
-                if (i == 0)
-                {
-                    array[i] = array[array.Length-1];
-                }
-                else
-                {
-                    int last= array[array[i]]-1;
-                    array[i] = last;
-                }
-                Console.Write(array[i] + " ");
+                array[i] = array[i + 1];
+                
             }
+            array[array.Length-1] = aux;
             
+
             //Console.WriteLine();
             //for (int i = 0; i < array.Length; ++i)
             //{
@@ -78,7 +91,7 @@ namespace Arrays
             //}
         }
         
-        static void swap(int[] array, int position1, int position2)
+        static void swap(int[] array, int position1, int position2) //\t es una tabulador
         {
             for (int i = 0; i < array.Length; ++i)
             {
@@ -121,7 +134,7 @@ namespace Arrays
 
                 if (array[i] % 2 == zero)
                 {
-                    sumnumpairs = sumnumpairs + array[i];
+                    sumnumpairs = sumnumpairs + array[i]; //=sum+= array[i]
                 }
 
             }
