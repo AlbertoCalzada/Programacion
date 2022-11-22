@@ -1,0 +1,13 @@
+C:\Users\Mañana\source\repos\SherlockHolmes\bin\Debug\netcoreapp3.1\SherlockHolmes.exe
+C:\Users\Mañana\source\repos\SherlockHolmes\bin\Debug\netcoreapp3.1\SherlockHolmes.deps.json
+C:\Users\Mañana\source\repos\SherlockHolmes\bin\Debug\netcoreapp3.1\SherlockHolmes.runtimeconfig.json
+C:\Users\Mañana\source\repos\SherlockHolmes\bin\Debug\netcoreapp3.1\SherlockHolmes.runtimeconfig.dev.json
+C:\Users\Mañana\source\repos\SherlockHolmes\bin\Debug\netcoreapp3.1\SherlockHolmes.dll
+C:\Users\Mañana\source\repos\SherlockHolmes\bin\Debug\netcoreapp3.1\SherlockHolmes.pdb
+C:\Users\Mañana\source\repos\SherlockHolmes\obj\Debug\netcoreapp3.1\SherlockHolmes.csprojAssemblyReference.cache
+C:\Users\Mañana\source\repos\SherlockHolmes\obj\Debug\netcoreapp3.1\SherlockHolmes.AssemblyInfoInputs.cache
+C:\Users\Mañana\source\repos\SherlockHolmes\obj\Debug\netcoreapp3.1\SherlockHolmes.AssemblyInfo.cs
+C:\Users\Mañana\source\repos\SherlockHolmes\obj\Debug\netcoreapp3.1\SherlockHolmes.csproj.CoreCompileInputs.cache
+C:\Users\Mañana\source\repos\SherlockHolmes\obj\Debug\netcoreapp3.1\SherlockHolmes.dll
+C:\Users\Mañana\source\repos\SherlockHolmes\obj\Debug\netcoreapp3.1\SherlockHolmes.pdb
+C:\Users\Mañana\source\repos\SherlockHolmes\obj\Debug\netcoreapp3.1\SherlockHolmes.genruntimeconfig.cache
