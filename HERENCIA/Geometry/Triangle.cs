@@ -16,6 +16,9 @@ namespace Geometry
             this.height = height;
             SetArea((theBase * height) / 2);
             SetPerimeter(theBase + (2 * Math.Sqrt((Math.Pow(theBase, 2) + Math.Pow(height, 2)) / 2)));
+            //double cat = this.theBase / 2;
+            //double hipot = Math.Sqrt((Math.Pow(cat ,2) + Math.Pow(height,2)));
+            //SetPerimeter(theBase + (hipot * 2))
         }
 
         public override void Print()
