@@ -1,0 +1,14 @@
+E:\VisualStudio\repos\Aula\bin\Debug\netcoreapp3.1\Aula.exe
+E:\VisualStudio\repos\Aula\bin\Debug\netcoreapp3.1\Aula.deps.json
+E:\VisualStudio\repos\Aula\bin\Debug\netcoreapp3.1\Aula.runtimeconfig.json
+E:\VisualStudio\repos\Aula\bin\Debug\netcoreapp3.1\Aula.runtimeconfig.dev.json
+E:\VisualStudio\repos\Aula\bin\Debug\netcoreapp3.1\Aula.dll
+E:\VisualStudio\repos\Aula\bin\Debug\netcoreapp3.1\Aula.pdb
+E:\VisualStudio\repos\Aula\obj\Debug\netcoreapp3.1\Aula.csproj.AssemblyReference.cache
+E:\VisualStudio\repos\Aula\obj\Debug\netcoreapp3.1\Aula.GeneratedMSBuildEditorConfig.editorconfig
+E:\VisualStudio\repos\Aula\obj\Debug\netcoreapp3.1\Aula.AssemblyInfoInputs.cache
+E:\VisualStudio\repos\Aula\obj\Debug\netcoreapp3.1\Aula.AssemblyInfo.cs
+E:\VisualStudio\repos\Aula\obj\Debug\netcoreapp3.1\Aula.csproj.CoreCompileInputs.cache
+E:\VisualStudio\repos\Aula\obj\Debug\netcoreapp3.1\Aula.dll
+E:\VisualStudio\repos\Aula\obj\Debug\netcoreapp3.1\Aula.pdb
+E:\VisualStudio\repos\Aula\obj\Debug\netcoreapp3.1\Aula.genruntimeconfig.cache
