@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Aula
 {
@@ -10,13 +10,25 @@ namespace Aula
             Subject entornos = new Subject();
             Subject bbdd = new Subject();
             Person oscar = new Teacher("Óscar", 30, "Masculino", programacion);
-            Student[]students= new Student[10];
+            Student[] students = new Student[10];
             ClassRoom classroom1 = new ClassRoom(001, programacion, 31);
-            for(int i=0; i<students.Length; i++)
+            for (int i = 0; i < students.Length; i++)
             {
-                
+
             }
             classroom1.GoClass(students);
+        }
+    }
+    class Tuition
+    {
+        Subject subject;
+        Student student;
+        int calif;
+
+        public Tuition(Subject subject, Student student)
+        {
+            this.student = student;
+            this.subject = subject;
         }
     }
 
@@ -63,14 +75,14 @@ namespace Aula
             subject = value;
         }
 
-        public void GoClass(Person[]students)
+        public void GoClass(Person[] students)
         {
-            
+
             students = new Student[30];
             Random random = new Random();
             double studentPr = 0.5;
             double teacherPr = 0.2;
-            double randomNum=random.NextDouble();
+            double randomNum = random.NextDouble();
             if (randomNum < teacherPr)
             {
                 Console.WriteLine("El profesor no acude a clase");
@@ -79,12 +91,12 @@ namespace Aula
             {
                 Console.WriteLine("El profesor acude a clase");
             }
-            for(int i = 0; i < students.Length; ++i)
+            for (int i = 0; i < students.Length; ++i)
             {
                 randomNum = random.NextDouble();
                 if (randomNum < studentPr)
                 {
-                    Console.WriteLine("El estudiante "+ students[i].GetName()+ " no acude a clase");
+                    Console.WriteLine("El estudiante " + students[i].GetName() + " no acude a clase");
                 }
                 else
                 {
@@ -104,7 +116,7 @@ namespace Aula
 
         public Subject()
         {
-            
+
         }
     }
     class Person
@@ -130,17 +142,17 @@ namespace Aula
         }
         public void SetName(string name)
         {
-            this.name=name;
+            this.name = name;
         }
     }
-
+    // se puede recorrer el array pequeño para meterlo en uno mas grande si queremos aumentar el tamaño de este.
     class Student : Person
     {
         double calification;
-
-        public Student(string name, int age, string gender) :base(name, age, gender)
+        Tuition[] tuitions;
+        public Student(string name, int age, string gender) : base(name, age, gender)
         {
-            
+            tuitions = new Tuition[5];
         }
     }
     class Teacher : Person
