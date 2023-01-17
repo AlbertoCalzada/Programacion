@@ -103,6 +103,18 @@ namespace Aula
                     Console.WriteLine("El estudiante " + students[i].GetName() + "  acude a clase");
                 }
             }
+
+            //if (n == 1)
+            //{
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+
+            //igual a 
+            //return n==1
         }
 
         public void SeImparte()
@@ -146,6 +158,7 @@ namespace Aula
         }
     }
     // se puede recorrer el array pequeño para meterlo en uno mas grande si queremos aumentar el tamaño de este.
+    //EN LA RELACION N:M SI TENEMOS ATRIBUTOS PODEMOS CREAR UNA NUEVA CLASE 
     class Student : Person
     {
         double calification;
