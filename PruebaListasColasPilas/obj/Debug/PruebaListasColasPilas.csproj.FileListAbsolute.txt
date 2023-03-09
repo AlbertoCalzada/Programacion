@@ -1,0 +1,8 @@
+D:\VisualStudio\repos\PruebaListasColasPilas\bin\Debug\PruebaListasColasPilas.exe.config
+D:\VisualStudio\repos\PruebaListasColasPilas\bin\Debug\PruebaListasColasPilas.exe
+D:\VisualStudio\repos\PruebaListasColasPilas\bin\Debug\PruebaListasColasPilas.pdb
+D:\VisualStudio\repos\PruebaListasColasPilas\obj\Debug\PruebaListasColasPilas.csproj.AssemblyReference.cache
+D:\VisualStudio\repos\PruebaListasColasPilas\obj\Debug\PruebaListasColasPilas.csproj.SuggestedBindingRedirects.cache
+D:\VisualStudio\repos\PruebaListasColasPilas\obj\Debug\PruebaListasColasPilas.csproj.CoreCompileInputs.cache
+D:\VisualStudio\repos\PruebaListasColasPilas\obj\Debug\PruebaListasColasPilas.exe
+D:\VisualStudio\repos\PruebaListasColasPilas\obj\Debug\PruebaListasColasPilas.pdb
