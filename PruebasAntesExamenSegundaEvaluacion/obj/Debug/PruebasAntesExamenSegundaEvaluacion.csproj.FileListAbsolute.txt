@@ -1,0 +1,8 @@
+D:\VisualStudio\repos\PruebasAntesExamenSegundaEvaluacion\bin\Debug\PruebasAntesExamenSegundaEvaluacion.exe.config
+D:\VisualStudio\repos\PruebasAntesExamenSegundaEvaluacion\bin\Debug\PruebasAntesExamenSegundaEvaluacion.exe
+D:\VisualStudio\repos\PruebasAntesExamenSegundaEvaluacion\bin\Debug\PruebasAntesExamenSegundaEvaluacion.pdb
+D:\VisualStudio\repos\PruebasAntesExamenSegundaEvaluacion\obj\Debug\PruebasAntesExamenSegundaEvaluacion.csproj.AssemblyReference.cache
+D:\VisualStudio\repos\PruebasAntesExamenSegundaEvaluacion\obj\Debug\PruebasAntesExamenSegundaEvaluacion.csproj.SuggestedBindingRedirects.cache
+D:\VisualStudio\repos\PruebasAntesExamenSegundaEvaluacion\obj\Debug\PruebasAntesExamenSegundaEvaluacion.csproj.CoreCompileInputs.cache
+D:\VisualStudio\repos\PruebasAntesExamenSegundaEvaluacion\obj\Debug\PruebasAntesExamenSegundaEvaluacion.exe
+D:\VisualStudio\repos\PruebasAntesExamenSegundaEvaluacion\obj\Debug\PruebasAntesExamenSegundaEvaluacion.pdb
